@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -16,25 +16,49 @@
 
       header {
         background-color: #323b42;
-        padding: 1em 0;
+        padding: 2em 0;
         text-align: center;
       }
 
       header h1 {
         display: block;
-        width: 936px;
-        height: 489px;
-        margin: 50px auto 20px auto;
-        background-image: url('images/banner-936.jpg');
         font-size: 0;
-        border-width: 7px 10px 7px 10px;
         border-color: #ddd;
         border-style: solid;
-        border-radius: 40px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 981px) {
+        header h1 {
+          width: 936px;
+          height: 489px;
+          background-image: url('images/banner-936.jpg');
+          border-width: 7px 10px 7px 10px;
+          border-radius: 40px;
+        }
+      } 
+      @media (min-width: 768px) and (max-width: 980px) {
+        header h1 {
+          width: 700px;
+          height: 366px;
+          background-image: url('images/banner-700.jpg');
+          border-width: 5px 8px 5px 8px;
+          border-radius: 30px;
+        }
+      }
+      @media (max-width: 767px) {
+        header h1 {
+          width: 360px;
+          height: 188px;
+          background-image: url('images/banner-360.jpg');
+          border-width: 3px 5px 3px 5px;
+          border-radius: 15px;
+        }
       }
 
       header h2 {
-        margin: 0;
+        margin:  0.8em 0 0 0;
+        padding: 0;
         font-size: 2em;
         color: #323b42;
         color: #fff
@@ -46,7 +70,7 @@
       }
 
       section {
-        padding: 2em;
+        padding: 1.5em;
       }
 
       section:nth-child(even) {
@@ -66,7 +90,12 @@
 
       section p {
         font-size: 1.2em;
-        }
+      }
+
+      section ul ul li,
+      section ol ul li {
+        font-size: 1.2em;
+      }
 
       button {
         display: block;
@@ -74,14 +103,14 @@
         color: white;
         border: none;
         padding: 0.7em 1.4em;
-        font-size: 1.4em;
+        font-size: 1.2em;
         cursor: pointer;
         font-weight: bold;
         border-radius: 0.4em;
         margin: 20px auto 0 auto;
       }
 
-      button:hover {
+      button: hover {
         background-color: #45a049;
       }
 
@@ -101,13 +130,74 @@
   <body>
 
     <header>
-      <div>
-        <h1>Trefeglwys - Save Our Village!</h1>
-        <h2>Save Our Village from Unsightly Solar Farm!</h2>
-      </div>
+      <h1>Trefeglwys - Save Our Village!</h1>
+      <h2>Save Our Village from Unsightly Solar Farm!</h2>
     </header>
 
     <main>
+
+      <section id="whats-occurring">
+        <h3>What's Occurring?</h3>
+        <p>A planning application has been submitted to vomit a giant solar farm into the middle of several housing estates, in
+          the rural village of Trefeglwys in Powys, Wales. You can see the actual estates and a mock-up of the solar farm in the
+          banner image above (credits in footer).
+        </p>
+        <p>The plan places 2000 x 2.1 x 1.1 metre solar panels within less than 10 metres of some properties, directly in front
+          of their living rooms, with no fences or other visual break inbetween. Please note that the mock-up is missing
+          the 2 elevated buildings that should be on the left side of the photo, towering above the hedgerows and panels.
+        </p>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+      </section>
+
+      <section id="why-should-I-care">
+        <h3>Why Should I Care?</h3>
+        <p>A fair question, and the answer probably depends on your proximity to the panels - but some combination of:
+          <ul>
+            <li>
+              <p><strong>Property Values:</strong> Everywhere has a different opinion, ranging from &quot;no effect&quot; to
+                &quot;kiss goodbye to 25% of your property value&quot;. The largest study of its kind (commissioned by
+                beneficiaries of the solar industry) reckoned that buyers will pay &pound;600 GBP more per year (&pound;15,000 GBP
+                over the course of a regular mortgage) not to live within kilometers of a solar farm. This farm will be 100 times
+                closer to our homes.
+              </p>
+              <p>Don't think it'll only affect us, though. A solar farm in the village, especially so close to a large proportion
+                of the houses is likely to affect prices farther afield, too</p>
+            </li>
+            <li>
+              <p><strong>Precedent:</strong> This is low-value land, on a floodplain - it can't be used for anything except this or
+                grazing. This isn't just about this one solar farm - if this application goes through, it opens the flood gates, quite
+                literally, to use almost any land in any location within the village, county and potentially wider, for solar farms.
+              </p>
+              <p>It's us today, but it could be your neighbouring field or village tomorrow - and once one passes, the rest will be
+                virtually unstoppable!</p>
+            </li>
+            <li>
+              <p><strong>Legal Process is being ignored:</strong> The plan states that the site is 0.9 hectares, but it's been
+                established as &gt; 1.0 hectare by the SAB (SuDS Approval Body). That means it qualifies as a &quot;Major Development&quot;,
+                which in turn means that there are all sorts of additional legal obligations which have been skipped, such as:
+                <ul>
+                  <li>Making draft planning application documents available to view</li>
+                  <li>Providing a 28 day pre-application consultation period</li>
+                  <li>Reporting on how the pre-application consultation was undertaken and how peoples views were considered, in a
+                    'Pre-Application Consultation Report', submitted as part of the application</li>
+                  <li>Providing written notice to all owners/occupiers of land adjoining the site</li>
+                </ul>
+              </p>
+            </li>
+            <li><p><strong>Late-breaking changes to plans which should affect key decisions are being overlooked</strong></li>
+            <li><p><strong>The SuDS Approval Body (SAB) rejected it due to fundamental flaws!</strong></p></li>
+            <li><p><strong>No Bat Survey despite bats in the area: </strong> This is a requirement which has been skipped</p></li>
+            <li><p><strong>Because the plan is full of holes</strong>, including the one where the sewage pipe running through the field hasn't
+              been mentioned in the plans, or brought up by the council who approved the original plans to install it a few years
+              ago</p>
+            </li>
+            <li><p><strong>Because councillors made up their minds before considering feedback, and are willing to approve it in spite
+              of government bodies explicitly telling them not to!</strong></p>
+            </li>
+          </ul>
+        </p>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+      </section>
 
       <section id="introduction">
         <h3>Introduction</h3>
@@ -125,12 +215,13 @@
          overlooked, timeline irregularities, etc.
         </p>
 
-        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or Support)</button>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
       </section>
 
       <section id="application-contents">
         <h3>Planning Application Contents</h3>
         <p>The <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=SOSH1OMPJXC00" target="_new">details of the application can be found here</a></p>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
       </section>
 
       <section id="community-feedback">
@@ -140,9 +231,9 @@
           tab on the Powys Government Planning Application Comments website, or via the email address provided on the notice
           placed on 15th January. So far, no one has received a response to any of these concerns. In light of this, and the
           fact that &quot;In light of recent data protection incidents, it is considered that the risk resulting from publishing
-          third party correspondence is too great&quot;, we've decided to publish our own correspondance and thoughts for public
-          dissemination.
+          third party correspondence is too great&quot;, we've decided to publish our own thoughts for public dissemination.
         </p>
+        <p>(I mean, really, it's not too hard to anonymise comments, is it? They managed it for the councillor ones!)</p>
         <p>We have also created a <a href="https://forms.gle/Uw6jD8jMhEw5VR2q9" target="_new">Community Views Form</a>, in order
           to guage and visualise community sentiment, as this is also sadly lacking from the process.
         </p>
@@ -154,11 +245,12 @@
         <ol>
           <li>
             <div class="question">
-              <p>Regarding the Consultee Comment on Tue 28 Jan 2025 entitled &quot;PCC-(N) Land Drainage&quot;, how have the matters raised been addressed? Specifically:</p>
+              <p>Regarding the Consultee Comment on Tue 28 Jan 2025 entitled &quot;PCC-(N) Land Drainage&quot;, how have the matters
+                raised been addressed? Specifically:</p>
                 <ol>
                   <li>
                     <p>&quot;Having reviewed the information provided by the applicant, <strong>the SAB deem the surface water drainage strategy (SWDS) is fundamentally flawed</strong>.&quot;</p>
-                    <p>As the SAB deem the Surface Water Drainage Strategy (SWDS) as fundamentally flawed, <strong>the Lead Local Flood Authority (LLFA) would recommend refusing the application</strong>strong> until such time as the applicant is able to demonstrate that a SAB Compliant SWDS is 
+                    <p>As the SAB deem the Surface Water Drainage Strategy (SWDS) as fundamentally flawed, <strong>the Lead Local Flood Authority (LLFA) would recommend refusing the application</strong> until such time as the applicant is able to demonstrate that a SAB Compliant SWDS is 
                       designed for the site&quot;</p>
                   </li>
                   <li><p>&quot;No drainage details have been submitted with this application&quot;</p></li>
@@ -207,6 +299,7 @@
             </div>
           </li>
         </ol>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
       </section>
 
       <section id="answered-questions">
@@ -227,6 +320,8 @@
             </div>
             <div class="evidence">
               <a href="images/planning-notice-highlighted.PNG" target="_new"><img src="images/planning-notice-highlighted.PNG" width="150" alt="Planning Notice allowed 21 days to respond, but councillor renders opinion before allowing time to respond" /></a>
+            </div>
+          </li>
           <li>
             <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have &quot;taken on board resident comments&quot;.</p></div>
             <div class="inaccuracies">
@@ -236,6 +331,7 @@
             </div>
           </li>
         </ol>
+        <button onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
       </section>
 
     </main>
