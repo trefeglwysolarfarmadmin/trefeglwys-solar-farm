@@ -118,13 +118,18 @@
         background-color: #333;
         color: white;
         text-align: center;
-        padding: 1em 0;
         position: fixed;
         width: 100%;
         bottom: 0;
       }
 
       footer ul { list-style-type: none; }
+      footer div {
+        display: inline-block;
+        padding: 0.5em;
+        width: 40%;
+      }
+      footer p { margin: 2px; padding: 0; }
     </style>
   </head>
   <body>
@@ -337,13 +342,18 @@
     </main>
 
     <footer>
-      <p>Content &copy; 2025 Trefeglwys Community - Save Our Village. All rights reserved.</p>
-      <p>With special thanks to:
-        <ul>
-          <li>Nick Cliffe for the solar farm simulation and banner</li>
-          <li>Jonathan Rudd for the aerial photography</li>
-        </ul>
-      </p>
+      <div>
+        <p>Content &copy; 2025 Trefeglwys Community - Save Our Village. All rights reserved.</p>
+        <button onclick="location.href='mailto:trefeglwyscommunity@gmail.com'">Contact Us</button>
+      </div>
+      <div>
+        <p>With special thanks to:
+          <ul>
+            <li>Nick Cliffe for the solar farm simulation and banner</li>
+            <li>Jonathan Rudd for the aerial photography</li>
+          </ul>
+        </p>
+      </div>
     </footer>
   </body>
 <html>
