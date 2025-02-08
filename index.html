@@ -9,192 +9,249 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style type="text/css">
       :root {
-        --bs-danger: #e70724; /* Replace #ff0000 with your desired color */
+        --bs-danger: #e70724;
+        --tc-red: #e70724;
       }
       .danger { background-color: #e70724 !important; }
       .btn-danger { background-color: var(--bs-danger) !important; }
+      .accordion-header {
+        border-top: 4px solid var(--bs-accordion-border-color);
+        border-bottom: 4px solid var(--bs-accordion-border-color);
+        border-left: none;
+        border-right: none;
+      }
+      .accordion-button::after,
+      .accordion-button.collapsed::after,
+      .accordion-button:not(.collapsed)::after {
+        background-color: white;
+        border: 2px solid var(--tc-red);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 28 28' fill='%23e70724'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath d='M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z'/%3e%3c/svg%3e");
+        background-size: 32px 32px;
+        width: 32px;
+        height: 32px;
+      }
     </style>
 </head>
+
 <body class="bg-light text-dark">
-    <header class="bg-dark text-center py-4">
-        <h1 class="d-none">Trefeglwys - Save Our Village!</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="images/banner-936.jpg" class="img-fluid rounded-5 border border-4 border-light d-none d-lg-block mx-auto" alt="Banner Image">
-                    <img src="images/banner-700.jpg" class="img-fluid rounded-5 border border-3 border-light d-none d-md-block d-lg-none mx-auto" alt="Banner Image">
-                    <img src="images/banner-360.jpg" class="img-fluid rounded-5 border border-2 border-light d-block d-md-none mx-auto" alt="Banner Image">
+
+    <div class="row bg-dark">
+        <div class="col-12">
+            <header class="text-center py-4">
+                <h1 class="d-none">Trefeglwys - Save Our Village!</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="images/banner-936.jpg" class="img-fluid rounded-5 border border-4 border-light d-none d-lg-block mx-auto" alt="Banner Image">
+                            <img src="images/banner-700.jpg" class="img-fluid rounded-5 border border-3 border-light d-none d-md-block d-lg-none mx-auto" alt="Banner Image">
+                            <img src="images/banner-360.jpg" class="img-fluid rounded-5 border border-2 border-light d-block d-md-none mx-auto" alt="Banner Image">
+                        </div>
+                    </div>
+                    <h2 class="text-white mt-3">Save Our Village from Unsightly Solar Farm!</h2>
                 </div>
-            </div>
-            <h2 class="text-white mt-3">Save Our Village from Unsightly Solar Farm!</h2>
+            </header>
         </div>
-    </header>
-    <main class="bg-light pb-5">
-        <section id="whats-occurring" class="py-4">
-            <div class="container">
-                <h3 class="text-dark">What's Occurring?</h3>
-                <p>A planning application has been submitted to install a giant solar farm into the middle of several housing estates, in the rural village of Trefeglwys in Powys, Wales. You can see the actual estates and a mock-up of the solar farm in the banner image above (credits in footer).</p>
-                <p>The plan places 2000 x 2.1 x 1.1 metre solar panels within less than 10 metres of some properties, directly in front of their living rooms, with no fences or other visual break inbetween. Please note that the mock-up is missing the 2 elevated buildings that should be on the left side of the photo, towering above the hedgerows and panels.</p>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 accordion accordion-flush mt-4">
+
+            <section id="whats-occurring" class="accordion-item container px-0">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="h3">What's Occurring?</span>
+                    </button>
+                </h3>
+                <div id="collapseOne" class="py-4">
+                    <div class="accordion-body">
+                        <p>A planning application has been submitted to install a giant solar farm into the middle of several housing estates, in the rural village of Trefeglwys in Powys, Wales. You can see the actual estates and a mock-up of the solar farm in the banner image above (credits in footer).</p>
+                        <p>The plan places 2000 x 2.1 x 1.1 metre solar panels within less than 10 metres of some properties, directly in front of their living rooms, with no fences or other visual break inbetween. Please note that the mock-up is missing the 2 elevated buildings that should be on the left side of the photo, towering above the hedgerows and panels.</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="why-should-I-care" class="py-4 bg-light">
-            <div class="container">
-                <h3 class="text-dark">Why Should I Care?</h3>
-                <p>A fair question, and the answer probably depends on your proximity to the panels - but some combination of:</p>
-                <ul>
-                    <li>
-                        <p><strong>Property Values:</strong> Everywhere has a different opinion, ranging from "no effect" to "kiss goodbye to 25% of your property value". The largest study of its kind (commissioned by beneficiaries of the solar industry) reckoned that buyers will pay £600 GBP more per year (£15,000 GBP over the course of a regular mortgage) not to live within kilometers of a solar farm. This farm will be 100 times closer to our homes.</p>
-                        <p>Don't think it'll only affect us, though. A solar farm in the village, especially so close to a large proportion of the houses is likely to affect prices farther afield, too</p>
-                    </li>
-                    <li>
-                        <p><strong>Precedent:</strong> This is low-value land, on a floodplain - it can't be used for anything except this or grazing. This isn't just about this one solar farm - if this application goes through, it opens the flood gates, quite literally, to use almost any land in any location within the village, county and potentially wider, for solar farms.</p>
-                        <p>It's us today, but it could be your neighbouring field or village tomorrow - and once one passes, the rest will be virtually unstoppable!</p>
-                    </li>
-                    <li>
-                        <p><strong>Legal Process is being ignored:</strong> The plan states that the site is 0.9 hectares, but it's been established as > 1.0 hectare by the SAB (SuDS Approval Body). That means it qualifies as a "Major Development", which in turn means that there are all sorts of additional legal obligations which have been skipped, such as:</p>
+            </section>
+
+            <section id="why-should-I-care" class="bg-light accordion-item container px-0">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <span class="h3">Why Should I Care?</span>
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="py-4">
+                    <div class="accordion-body">
+                        <p>A fair question, and the answer probably depends on your proximity to the panels - but some combination of:</p>
                         <ul>
-                            <li>Making draft planning application documents available to view</li>
-                            <li>Providing a 28 day pre-application consultation period</li>
-                            <li>Reporting on how the pre-application consultation was undertaken and how peoples views were considered, in a 'Pre-Application Consultation Report', submitted as part of the application</li>
-                            <li>Providing written notice to all owners/occupiers of land adjoining the site</li>
+                            <li>
+                                <p><strong>Property Values:</strong> Everywhere has a different opinion, ranging from "no effect" to "kiss goodbye to 25% of your property value". The largest study of its kind (commissioned by beneficiaries of the solar industry) reckoned that buyers will pay £600 GBP more per year (£15,000 GBP over the course of a regular mortgage) not to live within kilometers of a solar farm. This farm will be 100 times closer to our homes.</p>
+                                <p>Don't think it'll only affect us, though. A solar farm in the village, especially so close to a large proportion of the houses is likely to affect prices farther afield, too</p>
+                            </li>
+                            <li>
+                                <p><strong>Precedent:</strong> This is low-value land, on a floodplain - it can't be used for anything except this or grazing. This isn't just about this one solar farm - if this application goes through, it opens the flood gates, quite literally, to use almost any land in any location within the village, county and potentially wider, for solar farms.</p>
+                                <p>It's us today, but it could be your neighbouring field or village tomorrow - and once one passes, the rest will be virtually unstoppable!</p>
+                            </li>
+                            <li>
+                                <p><strong>Legal Process is being ignored:</strong> The plan states that the site is 0.9 hectares, but it's been established as > 1.0 hectare by the SAB (SuDS Approval Body). That means it qualifies as a "Major Development", which in turn means that there are all sorts of additional legal obligations which have been skipped, such as:</p>
+                                <ul>
+                                    <li>Making draft planning application documents available to view</li>
+                                    <li>Providing a 28 day pre-application consultation period</li>
+                                    <li>Reporting on how the pre-application consultation was undertaken and how peoples views were considered, in a 'Pre-Application Consultation Report', submitted as part of the application</li>
+                                    <li>Providing written notice to all owners/occupiers of land adjoining the site</li>
+                                </ul>
+                            </li>
+                            <li><p><strong>Late-breaking changes to plans which should affect key decisions are being overlooked</strong></li>
+                            <li><p><strong>The SuDS Approval Body (SAB) rejected it due to fundamental flaws!</strong></p></li>
+                            <li><p><strong>No Bat Survey despite bats in the area:</strong> This is a requirement which has been skipped</p></li>
+                            <li><p><strong>Because the plan is full of holes</strong>, including the one where the sewage pipe running through the field hasn't been mentioned in the plans, or brought up by the council who approved the original plans to install it a few years ago</p></li>
+                            <li><p><strong>Because councillors made up their minds before considering feedback, and are willing to approve it in spite of government bodies explicitly telling them not to!</strong></p></li>
                         </ul>
-                    </li>
-                    <li><p><strong>Late-breaking changes to plans which should affect key decisions are being overlooked</strong></li>
-                    <li><p><strong>The SuDS Approval Body (SAB) rejected it due to fundamental flaws!</strong></p></li>
-                    <li><p><strong>No Bat Survey despite bats in the area:</strong> This is a requirement which has been skipped</p></li>
-                    <li><p><strong>Because the plan is full of holes</strong>, including the one where the sewage pipe running through the field hasn't been mentioned in the plans, or brought up by the council who approved the original plans to install it a few years ago</p></li>
-                    <li><p><strong>Because councillors made up their minds before considering feedback, and are willing to approve it in spite of government bodies explicitly telling them not to!</strong></p></li>
-                </ul>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                </div>
-            </div>
-        </section>
-        <section id="introduction" class="py-4">
-            <div class="container">
-                <h3 class="text-dark">Introduction</h3>
-                <p>On 15th January, 2024, an A4 paper notice was placed on the entrance gate to the field adjacent to Plas Trannon and Maes Trannon in Trefeglwys, announcing a Planning Application to build a 0.6 Megawatt solar farm on the field.</p>
-                <p>This website serves to document the community's response to the proposal itself, the process and council handling of it, and anything else which appears relevant, because attempts by the community to engage proactively with the council, and aspects of the "process" appear to be being "overlooked". Many valid concerns have been raised by the community via channels insisted on by the council, and they appear to have been ignored. The process is opaque and possibly being abused/subverted. Many within the community feel that the decision is a foregone conclusion, and actions and comments by councillors appear to support this.</p>
-                <p>We'll detail some of the contradictions, errors and omissions in the proposal, as well as legal matters being overlooked, timeline irregularities, etc.</p>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                </div>
-            </div>
-        </section>
-        <section id="application-contents" class="py-4 bg-light">
-            <div class="container">
-                <h3 class="text-dark">Planning Application Contents</h3>
-                <p>The <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=SOSH1OMPJXC00" target="_blank">details of the application can be found here</a></p>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                </div>
-            </div>
-        </section>
-        <section id="community-feedback" class="py-4">
-            <div class="container">
-                <h3 class="text-dark">Community Feedback</h3>
-                <p>As noted above, the community is feeding back our concerns via the <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=consulteeComments&keyVal=SOSH1OMPJXC00" target="_blank">Make a Comment</a> tab on the Powys Government Planning Application Comments website, or via the email address provided on the notice placed on 15th January. So far, no one has received a response to any of these concerns. In light of this, and the fact that "In light of recent data protection incidents, it is considered that the risk resulting from publishing third party correspondence is too great", we've decided to publish our own thoughts for public dissemination.</p>
-                <p>(I mean, really, it's not too hard to anonymise comments, is it? They managed it for the councillor ones!)</p>
-                <p>We have also created a <a href="https://forms.gle/Uw6jD8jMhEw5VR2q9" target="_blank">Community Views Form</a>, in order to gauge and visualize community sentiment, as this is also sadly lacking from the process.</p>
-            </div>
-        </section>
-        <section id="outstanding-questions2" class="py-4 bg-light">
-            <div class="container">
-                <h3 class="text-dark">Outstanding Questions</h3>
-                <p>We would like, have asked (or now ask) and have yet to receive answers to the following questions:</p>
-                <ol>
-                    <li>
-                        <div class="question">
-                            <p>Regarding the Consultee Comment on Tue 28 Jan 2025 entitled "PCC-(N) Land Drainage", how have the matters raised been addressed? Specifically:</p>
-                            <ol>
-                                <li>
-                                    <p>"Having reviewed the information provided by the applicant, <strong>the SAB deem the surface water drainage strategy (SWDS) is fundamentally flawed</strong>."</p>
-                                    <p>As the SAB deem the Surface Water Drainage Strategy (SWDS) as fundamentally flawed, <strong>the Lead Local Flood Authority (LLFA) would recommend refusing the application</strong> until such time as the applicant is able to demonstrate that a SAB Compliant SWDS is designed for the site"</p>
-                                </li>
-                                <li><p>"No drainage details have been submitted with this application"</p></li>
-                                <li><p>"If the applicant was to submit further information to confirm how the surface water is being managed and also indicated that it is being managed in a way that would be broadly SAB compliant, we would be happy to reconsider our recommendation for refusal. <strong>Without further information, we would continue to recommend refusal</strong>."</p></li>
-                                <li><p>"<strong>The requirement to obtain SAB consent sits outside of the planning process but is enforceable in a similar manner to planning law. It is a requirement to obtain SAB consent in addition to planning consent</strong>. Failure to engage with compliant SuDS design at an early stage may lead to significant unnecessary redesign costs."</p></li>
-                            </ol>
-                            <p>How has this matter been addressed and resolved?</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-                        <div class="evidence">
-                            <a href="images/pcc-land-drainage-highlighted.PNG" target="_blank"><img src="images/pcc-land-drainage-highlighted.PNG" class="img-thumbnail" width="150" alt="Highlighted Land Drainage Document"></a>
+                    </div>
+                </section>
+
+                <section id="introduction" class="py-4 accordion-item">
+                    <div class="container">
+                        <h3 class="text-dark">Introduction</h3>
+                        <p>On 15th January, 2024, an A4 paper notice was placed on the entrance gate to the field adjacent to Plas Trannon and Maes Trannon in Trefeglwys, announcing a Planning Application to build a 0.6 Megawatt solar farm on the field.</p>
+                        <p>This website serves to document the community's response to the proposal itself, the process and council handling of it, and anything else which appears relevant, because attempts by the community to engage proactively with the council, and aspects of the "process" appear to be being "overlooked". Many valid concerns have been raised by the community via channels insisted on by the council, and they appear to have been ignored. The process is opaque and possibly being abused/subverted. Many within the community feel that the decision is a foregone conclusion, and actions and comments by councillors appear to support this.</p>
+                        <p>We'll detail some of the contradictions, errors and omissions in the proposal, as well as legal matters being overlooked, timeline irregularities, etc.</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-                    </li>
-                    <li>
-                        <div class="question">
-                            <p>Why did anonymous Ward Councillor, in their Consultee Comment on Wed 29 Jan 2025, the day after the above comment from the LLFA (Lead Local Flood Authority) state "I am in general support of the application" when there is an outstanding requirement to obtain SuDS Approval Body consent?</p>
+                    </div>
+                </section>
+
+                <section id="community-feedback" class="py-4 accordion-item">
+                    <div class="container">
+                        <h3 class="text-dark">Community Feedback</h3>
+                        <p>As noted above, the community is feeding back our concerns via the <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=consulteeComments&keyVal=SOSH1OMPJXC00" target="_blank">Make a Comment</a> tab on the Powys Government Planning Application Comments website, or via the email address provided on the notice placed on 15th January. So far, no one has received a response to any of these concerns. In light of this, and the fact that "In light of recent data protection incidents, it is considered that the risk resulting from publishing third party correspondence is too great", we've decided to publish our own thoughts for public dissemination.</p>
+                        <p>(I mean, really, it's not too hard to anonymise comments, is it? They managed it for the councillor ones!)</p>
+                        <p>We have also created a <a href="https://forms.gle/Uw6jD8jMhEw5VR2q9" target="_blank">Community Views Form</a>, in order to gauge and visualize community sentiment, as this is also sadly lacking from the process.</p>
+                    </div>
+                </section>
+
+                <section id="questions" class="py-4 bg-light accordion-item">
+                    <div class="container">
+                        <h3 class="text-dark">Questions</h3>
+
+                        <h4 id="answered-questions" class="text-dark">Answered Questions</h4>
+                        <p>This area is not under construction - it is fully complete</p>
+
+                        <h4 id="unanswered-questions" class="text-dark">Unanswered</h4>
+                        <p>We would like, have asked (or now ask) and have yet to receive answers to the following questions:</p>
+                        <ol>
+                            <li>
+                                <div class="question">
+                                    <p>Regarding the Consultee Comment on Tue 28 Jan 2025 entitled "PCC-(N) Land Drainage", how have the matters raised been addressed? Specifically:</p>
+                                    <ol>
+                                        <li>
+                                            <p>"Having reviewed the information provided by the applicant, <strong>the SAB deem the surface water drainage strategy (SWDS) is fundamentally flawed</strong>."</p>
+                                            <p>As the SAB deem the Surface Water Drainage Strategy (SWDS) as fundamentally flawed, <strong>the Lead Local Flood Authority (LLFA) would recommend refusing the application</strong> until such time as the applicant is able to demonstrate that a SAB Compliant SWDS is designed for the site"</p>
+                                        </li>
+                                        <li><p>"No drainage details have been submitted with this application"</p></li>
+                                        <li><p>"If the applicant was to submit further information to confirm how the surface water is being managed and also indicated that it is being managed in a way that would be broadly SAB compliant, we would be happy to reconsider our recommendation for refusal. <strong>Without further information, we would continue to recommend refusal</strong>."</p></li>
+                                        <li><p>"<strong>The requirement to obtain SAB consent sits outside of the planning process but is enforceable in a similar manner to planning law. It is a requirement to obtain SAB consent in addition to planning consent</strong>. Failure to engage with compliant SuDS design at an early stage may lead to significant unnecessary redesign costs."</p></li>
+                                    </ol>
+                                    <p>How has this matter been addressed and resolved?</p>
+                                </div>
+                                <div class="evidence">
+                                    <a href="images/pcc-land-drainage-highlighted.PNG" target="_blank"><img src="images/pcc-land-drainage-highlighted.PNG" class="img-thumbnail" width="150" alt="Highlighted Land Drainage Document"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <p>Why did anonymous Ward Councillor, in their Consultee Comment on Wed 29 Jan 2025, the day after the above comment from the LLFA (Lead Local Flood Authority) state "I am in general support of the application" when there is an outstanding requirement to obtain SuDS Approval Body consent?</p>
+                                </div>
+                                <div class="evidence">
+                                    <a href="images/ward-councillor-comment-in-support.PNG" target="_blank"><img src="images/ward-councillor-comment-in-support.PNG" class="img-thumbnail" width="150" alt="Ward Councillor comment approves, but ignores process/consent issues"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <p>Can the application be granted without SuDS Approval Body consent?</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="questions">
+                                    <p>In the application, it is stated that the site is 0.9 hectares, but in the Consultee Comment from Land Drainage on 27 Jan 2025, the LLFA (Lead Local Flood Authority) states "Furthermore, the SuDS Approval Body (SAB) deem that the construction area is greater than 100m2". 100m2 is 1 hectare, which is one of the qualifying thresholds for a "Major Development". As such, there are significantly more requirements of the proposer, for example, a statutory 28 day pre-application consultation into the planning process.</p>
+                                    <p>As members of the community, we are not aware of, and have not been involved in any pre-application consultation process.</p>
+                                    <ul>
+                                        <li>If there is evidence to refute SAB's assessment of the site area, please could it be provided via the planning portal?</li>
+                                        <li>If there is no evidence to the contrary, will the application be rejected on the basis that it has failed to meet its legal obligations?</li>
+                                        <li>If the application will not be rejected on these grounds, please explain why these statutory requirements do not apply</li>
+                                    </ul>
+                                </div>
+                                <div class="evidence">
+                                    <a href="images/major-development-requirements.PNG" target="_blank"><img src="images/major-development-requirements.PNG" class="img-thumbnail" width="150" alt="Sites over 1 hectare are automatically Major Developments"></a>
+                                    <a href="images/pre-planning-consultation-highlighted.PNG" target="_blank"><img src="images/pre-planning-consultation-highlighted.PNG" class="img-thumbnail" width="150" alt="Requirement for pre-planning consultation on site areas over 1 hectare"></a>
+                                    <a href="images/pre-application-consultation-requirements.PNG" target="_blank"><img src="images/pre-application-consultation-requirements.PNG" class="img-thumbnail" width="150" alt="None of these requirements have been met"></a>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-                        <div class="evidence">
-                            <a href="images/ward-councillor-comment-in-support.PNG" target="_blank"><img src="images/ward-councillor-comment-in-support.PNG" class="img-thumbnail" width="150" alt="Ward Councillor comment approves, but ignores process/consent issues"></a>
+
+                    </div>
+                </section>
+
+                <section id="inaccuracies-and-misleading-statements" class="py-4 bg-light accordion-item">
+                    <div class="container">
+                        <h3 class="text-dark">Inaccuracies and Misleading Statements</h3>
+                        <ol>
+                            <li>
+                                <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have reviewed "responses received through the planning portal"</p></div>
+                                <div class="inaccuracies">
+                                    <ol>
+                                        <li>The Powys County Council notice to the community was posted on 15th Jan, and clearly stated that anyone who wishes to make representations regarding the application must respond "within 21 days". As such, the public has until 5th February 2025 to make their feelings known. Indeed, we're aware of several long letters being delivered on or after the date on which the councillor had already made his intent known</li>
+                                    </ol>
+                                </div>
+                                <div class="evidence">
+                                    <a href="images/planning-notice-highlighted.PNG" target="_blank"><img src="images/planning-notice-highlighted.PNG" class="img-thumbnail" width="150" alt="Planning Notice allowed 21 days to respond, but councillor renders opinion before allowing time to respond"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have "taken on board resident comments".</p></div>
+                                <div class="inaccuracies">
+                                    <ol>
+                                        <li>These are objections, not comments; as clearly stated</li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-                    </li>
-                    <li>
-                        <div class="question">
-                            <p>Can the application be granted without SuDS Approval Body consent?</p>
+                    </div>
+                </section>
+
+                <section id="resources" class="py-4 bg-light accordion-item">
+                    <div class="container">
+                        <h3 class="text-dark">Resources</h3>
+                        <h4 id="application-contents" class="text-dark">Planning Application</h4>
+                        <p>The <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=SOSH1OMPJXC00" target="_blank">details of the application can be found here</a></p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-                    </li>
-                    <li>
-                        <div class="questions">
-                            <p>In the application, it is stated that the site is 0.9 hectares, but in the Consultee Comment from Land Drainage on 27 Jan 2025, the LLFA (Lead Local Flood Authority) states "Furthermore, the SuDS Approval Body (SAB) deem that the construction area is greater than 100m2". 100m2 is 1 hectare, which is one of the qualifying thresholds for a "Major Development". As such, there are significantly more requirements of the proposer, for example, a statutory 28 day pre-application consultation into the planning process.</p>
-                            <p>As members of the community, we are not aware of, and have not been involved in any pre-application consultation process.</p>
-                            <ul>
-                                <li>If there is evidence to refute SAB's assessment of the site area, please could it be provided via the planning portal?</li>
-                                <li>If there is no evidence to the contrary, will the application be rejected on the basis that it has failed to meet its legal obligations?</li>
-                                <li>If the application will not be rejected on these grounds, please explain why these statutory requirements do not apply</li>
-                            </ul>
-                        </div>
-                        <div class="evidence">
-                            <a href="images/major-development-requirements.PNG" target="_blank"><img src="images/major-development-requirements.PNG" class="img-thumbnail" width="150" alt="Sites over 1 hectare are automatically Major Developments"></a>
-                            <a href="images/pre-planning-consultation-highlighted.PNG" target="_blank"><img src="images/pre-planning-consultation-highlighted.PNG" class="img-thumbnail" width="150" alt="Requirement for pre-planning consultation on site areas over 1 hectare"></a>
-                            <a href="images/pre-application-consultation-requirements.PNG" target="_blank"><img src="images/pre-application-consultation-requirements.PNG" class="img-thumbnail" width="150" alt="None of these requirements have been met"></a>
-                        </div>
-                    </li>
-                </ol>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                </div>
-            </div>
-        </section>
-        <section id="answered-questions" class="py-4">
-            <div class="container">
-                <h3 class="text-dark">Answered Questions</h3>
-                <p>This area is not under construction - it is fully complete</p>
-            </div>
-        </section>
-        <section id="inaccuracies-and-misleading-statements" class="py-4 bg-light">
-            <div class="container">
-                <h3 class="text-dark">Inaccuracies and Misleading Statements</h3>
-                <ol>
-                    <li>
-                        <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have reviewed "responses received through the planning portal"</p></div>
-                        <div class="inaccuracies">
-                            <ol>
-                                <li>The Powys County Council notice to the community was posted on 15th Jan, and clearly stated that anyone who wishes to make representations regarding the application must respond "within 21 days". As such, the public has until 5th February 2025 to make their feelings known. Indeed, we're aware of several long letters being delivered on or after the date on which the councillor had already made his intent known</li>
-                            </ol>
-                        </div>
-                        <div class="evidence">
-                            <a href="images/planning-notice-highlighted.PNG" target="_blank"><img src="images/planning-notice-highlighted.PNG" class="img-thumbnail" width="150" alt="Planning Notice allowed 21 days to respond, but councillor renders opinion before allowing time to respond"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have "taken on board resident comments".</p></div>
-                        <div class="inaccuracies">
-                            <ol>
-                                <li>These are objections, not comments; as clearly stated</li>
-                            </ol>
-                        </div>
-                    </li>
-                </ol>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                </div>
-            </div>
-        </section>
-    </main>
+                        <h4 id="press-coverage" class="text-dark">Press Coverage</h4>
+                        <ul>
+                            <li>County Times</li>
+                        </ul>
+                        <h4 id="social-media-discussions" class="text-dark">Social Media Discussions</h4>
+                        <ul>
+                            <li>Facebook...</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
     <footer class="bg-dark text-white text-center py-3 row">
         <div class="col">
             <p>With special thanks to:</p>
