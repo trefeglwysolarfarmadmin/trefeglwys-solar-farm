@@ -11,15 +11,16 @@
       :root {
         --bs-danger: #e70724;
         --tc-red: #e70724;
+        --tc-secondary-bg: rgb(101 114 127);
       }
+      section { border: 3px solid var(--bs-accordion-border-color) !important; }
+      section .h3 { color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important; }
+      .accordion-body ul { margin-bottom: 1rem; }
+      #content { background-color: var(--tc-secondary-bg) }
+      .bg-secondary { background-color: var(--bs-accordion-border-color) !important; }
       .danger { background-color: #e70724 !important; }
       .btn-danger { background-color: var(--bs-danger) !important; }
-      .accordion-header {
-        border-top: 4px solid var(--bs-accordion-border-color);
-        border-bottom: 4px solid var(--bs-accordion-border-color);
-        border-left: none;
-        border-right: none;
-      }
+
       .accordion-button::after,
       .accordion-button.collapsed::after,
       .accordion-button:not(.collapsed)::after {
@@ -42,9 +43,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <img src="images/banner-936.jpg" class="img-fluid rounded-5 border border-4 border-light d-none d-lg-block mx-auto" alt="Banner Image">
-                            <img src="images/banner-700.jpg" class="img-fluid rounded-5 border border-3 border-light d-none d-md-block d-lg-none mx-auto" alt="Banner Image">
-                            <img src="images/banner-360.jpg" class="img-fluid rounded-5 border border-2 border-light d-block d-md-none mx-auto" alt="Banner Image">
+                            <img src="images/banner-936.jpg" class="img-fluid rounded-4 border border-3 border-light d-none d-lg-block mx-auto" alt="Banner Image">
+                            <img src="images/banner-700.jpg" class="img-fluid rounded-4 border border-2 border-light d-none d-md-block d-lg-none mx-auto" alt="Banner Image">
+                            <img src="images/banner-360.jpg" class="img-fluid rounded-4 border border-2 border-light d-block d-md-none mx-auto" alt="Banner Image">
                         </div>
                     </div>
                     <h2 class="text-white mt-3">Save Our Village from Unsightly Solar Farm!</h2>
@@ -53,17 +54,19 @@
         </div>
     </div>
 
-    <div class="row">
+    <div id="content" class="row">
 
-        <div class="col-12 accordion accordion-flush mt-4">
+        <div class="col-12 accordion text-dark accordion-flush mt-4">
 
-            <section id="whats-occurring" class="accordion-item container px-0">
+
+
+            <section id="whats-occurring" class="accordion-item container px-0 mb-4 rounded-3">
                 <h3 class="accordion-header">
-                    <button class="accordion-button bg-secondary text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button bg-secondary px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <span class="h3">What's Occurring?</span>
                     </button>
                 </h3>
-                <div id="collapseOne" class="py-4">
+                <div id="collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body">
                         <p>A planning application has been submitted to install a giant solar farm into the middle of several housing estates, in the rural village of Trefeglwys in Powys, Wales. You can see the actual estates and a mock-up of the solar farm in the banner image above (credits in footer).</p>
                         <p>The plan places 2000 x 2.1 x 1.1 metre solar panels within less than 10 metres of some properties, directly in front of their living rooms, with no fences or other visual break inbetween. Please note that the mock-up is missing the 2 elevated buildings that should be on the left side of the photo, towering above the hedgerows and panels.</p>
@@ -74,13 +77,15 @@
                 </div>
             </section>
 
-            <section id="why-should-I-care" class="bg-light accordion-item container px-0">
+
+
+            <section id="why-should-I-care" class="bg-light accordion-item container px-0 mb-4 rounded-3">
                 <h3 class="accordion-header">
-                    <button class="accordion-button bg-secondary text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <button class="accordion-button bg-secondary px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <span class="h3">Why Should I Care?</span>
                     </button>
                 </h3>
-                <div id="collapseTwo" class="py-4">
+                <div id="collapseTwo" class="accordion-collapse collapse show">
                     <div class="accordion-body">
                         <p>A fair question, and the answer probably depends on your proximity to the panels - but some combination of:</p>
                         <ul>
@@ -93,7 +98,7 @@
                                 <p>It's us today, but it could be your neighbouring field or village tomorrow - and once one passes, the rest will be virtually unstoppable!</p>
                             </li>
                             <li>
-                                <p><strong>Legal Process is being ignored:</strong> The plan states that the site is 0.9 hectares, but it's been established as > 1.0 hectare by the SAB (SuDS Approval Body). That means it qualifies as a "Major Development", which in turn means that there are all sorts of additional legal obligations which have been skipped, such as:</p>
+                                <p><strong>Legal Process is being ignored:</strong> The plan states that the site is 0.9 hectares, but the SAB (SuDS Approval Body) has established it as &gt; 1.0 hectare. That means it qualifies as a "Major Development" according to <a href="http://www.legislation.gov.uk/wsi/2012/801/pdfs/wsi_20120801_mi.pdf" target="_blank">Article 2 of the Town and County Planning (Development Management Procedure) (Wales) Order 2012 (DMPWO)</a>, which in turn means that there are all sorts of additional legal obligations which have been skipped, such as:</p>
                                 <ul>
                                     <li>Making draft planning application documents available to view</li>
                                     <li>Providing a 28 day pre-application consultation period</li>
@@ -111,11 +116,20 @@
                             <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="introduction" class="py-4 accordion-item">
-                    <div class="container">
-                        <h3 class="text-dark">Introduction</h3>
+
+
+
+            <section id="introduction" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class="h3">Introduction</span>
+                    </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
                         <p>On 15th January, 2024, an A4 paper notice was placed on the entrance gate to the field adjacent to Plas Trannon and Maes Trannon in Trefeglwys, announcing a Planning Application to build a 0.6 Megawatt solar farm on the field.</p>
                         <p>This website serves to document the community's response to the proposal itself, the process and council handling of it, and anything else which appears relevant, because attempts by the community to engage proactively with the council, and aspects of the "process" appear to be being "overlooked". Many valid concerns have been raised by the community via channels insisted on by the council, and they appear to have been ignored. The process is opaque and possibly being abused/subverted. Many within the community feel that the decision is a foregone conclusion, and actions and comments by councillors appear to support this.</p>
                         <p>We'll detail some of the contradictions, errors and omissions in the proposal, as well as legal matters being overlooked, timeline irregularities, etc.</p>
@@ -123,25 +137,56 @@
                             <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="community-feedback" class="py-4 accordion-item">
-                    <div class="container">
-                        <h3 class="text-dark">Community Feedback</h3>
+
+
+            <section id="community-feedback" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <span class="h3">Community Feedback</span>
+                    </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
                         <p>As noted above, the community is feeding back our concerns via the <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=consulteeComments&keyVal=SOSH1OMPJXC00" target="_blank">Make a Comment</a> tab on the Powys Government Planning Application Comments website, or via the email address provided on the notice placed on 15th January. So far, no one has received a response to any of these concerns. In light of this, and the fact that "In light of recent data protection incidents, it is considered that the risk resulting from publishing third party correspondence is too great", we've decided to publish our own thoughts for public dissemination.</p>
                         <p>(I mean, really, it's not too hard to anonymise comments, is it? They managed it for the councillor ones!)</p>
                         <p>We have also created a <a href="https://forms.gle/Uw6jD8jMhEw5VR2q9" target="_blank">Community Views Form</a>, in order to gauge and visualize community sentiment, as this is also sadly lacking from the process.</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="questions" class="py-4 bg-light accordion-item">
-                    <div class="container">
-                        <h3 class="text-dark">Questions</h3>
 
-                        <h4 id="answered-questions" class="text-dark">Answered Questions</h4>
-                        <p>This area is not under construction - it is fully complete</p>
 
-                        <h4 id="unanswered-questions" class="text-dark">Unanswered</h4>
+            <section id="answered-questions" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <span class="h3">Answered Questions</span>
+                    </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>This area is not under construction. Despite community efforts and dozens of objection letters, there's been no engagement or feedback from the council or planning committee.</p>
+                        <p>All concerns regarding the plan, process and points of law have been ignored.</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="unanswered-questions" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <span class="h3">Unanswered Questions</span>
+                    </button>
+                </h3>
+                <div id="collapseSix" class="accordion-collapse collapse">
+                    <div class="accordion-body">
                         <p>We would like, have asked (or now ask) and have yet to receive answers to the following questions:</p>
                         <ol>
                             <li>
@@ -195,13 +240,21 @@
                         <div class="text-center">
                             <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
-
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="inaccuracies-and-misleading-statements" class="py-4 bg-light accordion-item">
-                    <div class="container">
-                        <h3 class="text-dark">Inaccuracies and Misleading Statements</h3>
+
+
+
+            <section id="inaccuracies-and-misleading-statements" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <span class="h3">Inaccuracies and Misleading Statements</span>
+                    </button>
+                </h3>
+                <div id="collapseSeven" class="accordion-collapse collapse">
+                    <div class="accordion-body">
                         <ol>
                             <li>
                                 <div class="statement"><p>In their comment in support of the application on 29 Jan 2025, anonymous Ward Councillor stated that they have reviewed "responses received through the planning portal"</p></div>
@@ -227,28 +280,38 @@
                             <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section id="resources" class="py-4 bg-light accordion-item">
-                    <div class="container">
-                        <h3 class="text-dark">Resources</h3>
+            <section id="resources" class="accordion-item container px-0 mb-4 rounded-3">
+                <h3 class="accordion-header">
+                    <button class="accordion-button bg-secondary px-3 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        <span class="h3">Resources</span>
+                    </button>
+                </h3>
+                <div id="collapseEight" class="accordion-collapse collapse">
+                    <div class="accordion-body">
                         <h4 id="application-contents" class="text-dark">Planning Application</h4>
-                        <p>The <a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=SOSH1OMPJXC00" target="_blank">details of the application can be found here</a></p>
-                        <div class="text-center">
-                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
-                        </div>
+                        <p><a href="https://pa.powys.gov.uk/online-applications/applicationDetails.do?activeTab=summary&keyVal=SOSH1OMPJXC00" target="_blank">The planning application details can be found here</a></p>
+                        <h4>Legal Statute</h4>
+                        <ul>
+                            <li>This qualifies as a <a href="http://www.legislation.gov.uk/wsi/2012/801/pdfs/wsi_20120801_mi.pdf" target="_blank">Major Development</a>, which means that legal obligations such as a mandatory pre-application consultation, imposed by <a href="http://www.legislation.gov.uk/anaw/2015/4/section/17/enacted">section 61Z of the Town and County Planning Act 1990</a> have not been met. <a href="http://www.legislation.gov.uk/wsi/2016/59/made">Further provision is contained in Part 1A of the DMPWO</a>.</li>
+                        </ul>
                         <h4 id="press-coverage" class="text-dark">Press Coverage</h4>
                         <ul>
-                            <li>County Times</li>
+                            <li><a href="https://www.countytimes.co.uk/news/24918555.solar-farm-planned-land-trefeglwys-powys/" target="_blank">County Times</a></li>
                         </ul>
                         <h4 id="social-media-discussions" class="text-dark">Social Media Discussions</h4>
                         <ul>
-                            <li>Facebook...</li>
+                            <li><a href="https://www.facebook.com/groups/204603636804808/permalink/1661172924481198/" target="_blank">Meeting which didn't discuss it after all - Facebook</a></li>
                         </ul>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-danger mt-3 fw-bold" onclick="window.open('https://forms.gle/Uw6jD8jMhEw5VR2q9', '_blank')">Register Your Objection (or support)</button>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-            </main>
         </div>
     </div>
 
