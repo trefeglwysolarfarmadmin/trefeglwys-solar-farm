@@ -15,6 +15,22 @@ section .h3 {
     color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
+#unanswered-questions .accordion-body div.row {
+    border-top: 2px solid var(--bs-accordion-border-color);
+    padding-top: 1rem;
+}
+
+blockquote {
+    font-size: 1rem !important;
+    margin-left: 3rem;
+    padding-left: 1rem;
+    border-left: 0.5rem solid var(--bs-accordion-border-color);
+}
+
+.blockquote-footer {
+    margin-top: 1rem;
+}
+
 .bg-secondary {
     background-color: var(--bs-accordion-border-color) !important;
 }
