@@ -1,0 +1,38 @@
+#content {
+    background-color: var(--tc-secondary-bg);
+}
+
+:root {
+    --bs-danger: #e70724;
+    --tc-red: #e70724;
+    --tc-secondary-bg: rgb(101 114 127);
+}
+
+section {
+    border: 3px solid var(--bs-accordion-border-color) !important;
+}
+section .h3 {
+    color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-accordion-border-color) !important;
+}
+
+.danger,
+.btn-danger {
+    background-color: var(--bs-danger) !important;
+}
+
+.accordion-body ul,
+.accordion-body ol {
+    margin-bottom: 1rem;
+}
+
+.accordion-button::after,
+.accordion-button.collapsed::after,
+.accordion-button:not(.collapsed)::after {
+    background-size: 1.6rem 1.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
