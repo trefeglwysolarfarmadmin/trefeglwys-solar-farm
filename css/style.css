@@ -52,3 +52,23 @@ blockquote {
     width: 1.6rem;
     height: 1.6rem;
 }
+
+li.petition {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+}
+
+li.petition img {
+    opacity: 1;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    max-width: 60%;
+    height: auto;
+    margin: 3rem auto;
+    border: 0;
+}
+
+li.petition img:hover {
+    opacity: 0.8;
+}
